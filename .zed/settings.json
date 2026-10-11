@@ -1,0 +1,21 @@
+// Folder-specific settings
+//
+// For a full list of overridable settings, and general information on folder-specific settings,
+// see the documentation: https://zed.dev/docs/configuring-zed#settings-files
+{
+  "languages": {
+    "C": {
+      "language_servers": ["clangd"]
+    },
+    "C++": {
+      "language_servers": ["clangd"],
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "clang-format",
+          "arguments": ["--style=file", "--assume-filename={buffer_path}"]
+        }
+      }
+    }
+  }
+}
